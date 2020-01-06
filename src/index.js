@@ -94,4 +94,3 @@ app.get("/prestador2", (req, res) => {
 });
 
 console.log("BackEnd Rodando...")
-app.listen(4000);

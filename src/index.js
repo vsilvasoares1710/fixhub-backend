@@ -6,6 +6,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const prestadorTeste1Completo = {
+  id:1,
   nome: "Píruleison da Silva Sauro",
   icone: "https://image.flaticon.com/icons/png/512/56/56990.png",
   celular: "11 91234-5678",
@@ -37,6 +38,7 @@ const prestadorTeste1Completo = {
   }
 };
 const prestadorTeste2Completo = {
+  id:2,
   nome: "Jubileu Astrogildo de Magalhães",
   icone: "https://image.flaticon.com/icons/png/512/57/57134.png",
   celular: "12 99876-5432",
@@ -58,6 +60,7 @@ const prestadorTeste2Completo = {
 };
 
 const prestadorTeste1Resumo = {
+  id:1,
   nome: "Píruleison da Silva Sauro",
   icone: "https://image.flaticon.com/icons/png/512/56/56990.png",
   tags: [
@@ -75,6 +78,7 @@ const prestadorTeste1Resumo = {
   }
 };
 const prestadorTeste2Resumo = {
+  id:2,
   nome: "Jubileu Astrogildo de Magalhães",
   icone: "https://image.flaticon.com/icons/png/512/57/57134.png",
   tags: ["professor", "musica", "danca", "canto"],
@@ -85,17 +89,14 @@ const prestadorTeste2Resumo = {
 };
 const resumoPesquisa = {info: { paginas: 1, profissionaisEncontrados: 2 }, profissionais: [prestadorTeste1Resumo, prestadorTeste2Resumo]}
 
-app.get("/pesquisaPrestadores", (req, res) => {
+app.get("/pesquisaProfissionais", (req, res) => {
   res.send(JSON.stringify(resumoPesquisa));
 });
 
-app.get("/prestador1", (req, res) => {
-  res.send(JSON.stringify(prestadorTeste1Completo));
+app.get("/profissional/:id", (req, res) => {
+  res.send(JSON.stringify("Requisição Devolvida"));
 });
 
-app.get("/prestador2", (req, res) => {
-  res.send(JSON.stringify(prestadorTeste2Completo));
-});
 
 console.log("BackEnd Rodando...")
 

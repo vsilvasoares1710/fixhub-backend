@@ -7,6 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const prestadorTeste1Completo = {
   nome: "Píruleison da Silva Sauro",
+  icone: "https://image.flaticon.com/icons/png/512/56/56990.png",
   celular: "11 91234-5678",
   telefone: "11 3911-1234",
   whatsapp: "11 91234-5678",
@@ -27,7 +28,7 @@ const prestadorTeste1Completo = {
   },
   anuncio: {
     texto:
-      "Tempor pariatur anim esse culpa ullamco dolor ea ea eiusmod. Cupidatat exercitation ipsum ullamco ipsum aute. Culpa ex voluptate laborum deserunt commodo est ullamco labore in ullamco.\nDo velit ad duis dolor magna ullamco id esse dolor incididunt ad dolor ipsum. Laborum aliquip consectetur exercitation id sunt qui. Ullamco ad aliqua quis incididunt occaecat. Pariatur est voluptate do Lorem est aliquip officia sunt enim et sint sit. Consectetur ullamco minim tempor quis labore nulla esse laboris ex labore. Aliqua est id Lorem officia eiusmod aute irure aliquip tempor ex ex occaecat officia officia. Sint eu mollit reprehenderit adipisicing dolor exercitation labore esse nulla dolor veniam cillum aliquip.",
+    "Tempor pariatur anim esse culpa ullamco dolor ea ea eiusmod. Cupidatat exercitation ipsum ullamco ipsum aute. Culpa ex voluptate laborum deserunt commodo est ullamco labore in ullamco.\nDo velit ad duis dolor magna ullamco id esse dolor incididunt ad dolor ipsum. Laborum aliquip consectetur exercitation id sunt qui. Ullamco ad aliqua quis incididunt occaecat. Pariatur est voluptate do Lorem est aliquip officia sunt enim et sint sit. Consectetur ullamco minim tempor quis labore nulla esse laboris ex labore. Aliqua est id Lorem officia eiusmod aute irure aliquip tempor ex ex occaecat officia officia. Sint eu mollit reprehenderit adipisicing dolor exercitation labore esse nulla dolor veniam cillum aliquip.",
     imagens: [
       "https://cdn.pixabay.com/photo/2019/12/23/15/07/freiburg-4714770_960_720.jpg",
       "https://cdn.pixabay.com/photo/2019/12/25/09/23/north-4718160_960_720.jpg",
@@ -37,6 +38,7 @@ const prestadorTeste1Completo = {
 };
 const prestadorTeste2Completo = {
   nome: "Jubileu Astrogildo de Magalhães",
+  icone: "https://image.flaticon.com/icons/png/512/57/57134.png",
   celular: "12 99876-5432",
   whatsapp: "12 99876-5432",
   email: "jubileu_astrogildo@gmail.com",
@@ -57,6 +59,7 @@ const prestadorTeste2Completo = {
 
 const prestadorTeste1Resumo = {
   nome: "Píruleison da Silva Sauro",
+  icone: "https://image.flaticon.com/icons/png/512/56/56990.png",
   tags: [
     "eletricista",
     "pintor",
@@ -73,6 +76,7 @@ const prestadorTeste1Resumo = {
 };
 const prestadorTeste2Resumo = {
   nome: "Jubileu Astrogildo de Magalhães",
+  icone: "https://image.flaticon.com/icons/png/512/57/57134.png",
   tags: ["professor", "musica", "danca", "canto"],
   anuncio: {
     texto:

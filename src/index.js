@@ -5,6 +5,7 @@ const todosPrestadores = require("./database/todosPrestadores");
 const pesquisa = require("./database/pesquisa");
 const profissionais = pesquisa.profissionais;
 const paginas = pesquisa.paginas;
+const filtros = require("./database/filtros")
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,7 +20,7 @@ app.get("/pesquisaProfissionais/:page", (req, res) => {
 });
 
 app.post("/profissional/:id", (req, res) => {
-  
+
   const profissionalCompleto = todosPrestadores[req.params.id - 1];
 
   const { contato, ...informacoesPublicas } = profissionalCompleto;
@@ -29,6 +30,11 @@ app.post("/profissional/:id", (req, res) => {
   } else {
     res.send(informacoesPublicas);
   }
+});
+
+app.get("/filtros", (req, res) => {
+
+  res.send(filtros);
 });
 
 console.log("BackEnd Rodando...");

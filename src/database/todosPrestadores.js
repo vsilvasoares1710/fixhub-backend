@@ -1,12 +1,12 @@
 const prestadorTeste1Completo = {
   id: 1,
-  nome: "Píruleison da Silva Sauro",
+  nome: "João da SIlva",
   icone: "https://image.flaticon.com/icons/png/512/56/56990.png",
   contato: {
     celular: "11 91234-5678",
     telefone: "11 3911-1234",
     whatsapp: "11 91234-5678",
-    email: "contato@silva_sauro_serviços.com"
+    email: "contato@silvaserviços.com"
   },
   tags: [
     "eletricista",
@@ -18,9 +18,9 @@ const prestadorTeste1Completo = {
     "vidraceiro"
   ],
   redes_sociais: {
-    facebook: "facebook.com/piruleison_da_silva",
-    linkedin: "linkedin.com/piruleison_da_silva",
-    siteOficial: "piruleisonservicos.com"
+    facebook: "facebook.com/joao_da_silva",
+    linkedin: "linkedin.com/joao_da_silva",
+    siteOficial: "silvaservicos.com"
   },
   anuncio: {
     texto:
@@ -34,17 +34,17 @@ const prestadorTeste1Completo = {
 };
 const prestadorTeste2Completo = {
   id: 2,
-  nome: "Jubileu Astrogildo de Magalhães",
+  nome: "Matheus de Magalhães",
   icone: "https://image.flaticon.com/icons/png/512/57/57134.png",
   contato: {
     celular: "12 99876-5432",
     whatsapp: "12 99876-5432",
-    email: "jubileu_astrogildo@gmail.com"
+    email: "MatheusDeMag@gmail.com"
   },
-  tags: ["professor", "musica", "danca", "canto"],
+  tags: ["espanhol", "francês", "inglês"],
   redes_sociais: {
-    facebook: "facebook.com/jubi_jubao",
-    siteOficial: "professorastrogildo.com.br"
+    facebook: "facebook.com/matheusdemag",
+    siteOficial: "professormatheus.com.br"
   },
   anuncio: {
     texto:
@@ -56,4 +56,4 @@ const prestadorTeste2Completo = {
   }
 };
 const todosPrestadores = [prestadorTeste1Completo, prestadorTeste2Completo];
-module.exports = todosPrestadores
+module.exports = todosPrestadores;

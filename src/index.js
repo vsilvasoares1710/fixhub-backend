@@ -10,7 +10,7 @@ const filtros = require("./database/filtros")
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/profissionais/:tags/:page", (req, res) => {
+app.get("/profissionais/:tags/:page", (req, res) => { 
 
   const resumoPesquisa = {
     profissionais,

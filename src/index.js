@@ -10,7 +10,7 @@ const filtros = require("./database/filtros")
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/pesquisaProfissionais/:page", (req, res) => {
+app.get("/profissionais/:tags/:page", (req, res) => {
 
   const resumoPesquisa = {
     profissionais,
@@ -19,17 +19,12 @@ app.get("/pesquisaProfissionais/:page", (req, res) => {
   res.send(resumoPesquisa);
 });
 
-app.post("/profissional/:id", (req, res) => {
+app.get("/profissionais/:id", (req, res) => {
 
   const profissionalCompleto = todosPrestadores[req.params.id - 1];
 
-  const { contato, ...informacoesPublicas } = profissionalCompleto;
-
-  if (req.body.token) {
     res.send(profissionalCompleto);
-  } else {
-    res.send(informacoesPublicas);
-  }
+
 });
 
 app.get("/filtros", (req, res) => {

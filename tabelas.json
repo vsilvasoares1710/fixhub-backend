@@ -1,0 +1,46 @@
+{
+  "Tabela: Provider": {
+    "Coluna: id": "number",
+    "Coluna: nome": "string",
+    "Coluna: cpf_cnpj": "string",
+    "Coluna: icone": "string",
+
+    "contato": {
+      "Coluna: email": "string",
+      "Coluna: celular": "string",
+      "Coluna: whatsapp": "string",
+      "Coluna: telefone": "string"
+    },
+
+    "redes_sociais": {
+      "Coluna: facebook": "string",
+      "Coluna: linkedin": "string",
+      "Coluna: site_oficial": "string"
+    },
+
+    "localização": {
+      "Coluna: bairro": "string",
+      "Coluna: cidade": "string",
+      "Coluna: estado": "string",
+      "Coluna: endereço": "string"
+    },
+
+    "Coluna: tags": "json",
+
+    "anuncio": {
+      "Coluna: fotos": "json",
+      "Coluna: texto_anuncio": "string",
+      "Coluna: anuncio_pago": "boolean"
+    },
+
+    "Coluna: senha": "string",
+    "Coluna: created_at": "date",
+    "Coluna: updated_at": "date"
+  },
+
+  "Tabela: Category": {
+    "Coluna: id": "number",
+    "Coluna: tag": "string",
+    "Coluna: categoria": "string"
+  }
+}

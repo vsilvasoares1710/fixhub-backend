@@ -1,7 +1,7 @@
-const todosPrestadores = require("./todosPrestadores.js")
+const todosPrestadores = require("../models/dadosTest/todosPrestadores.js")
 
 const profissionais = todosPrestadores.map((value, index) => {
-    const { id, nome, icone, tags, anuncio: {texto} } = todosPrestadores[index];
+    const { id, nome, icone, tags, anuncio: {texto, anuncioPago} } = todosPrestadores[index];
     
     const prestadorTeste1Resumo = {
         id,
@@ -9,7 +9,8 @@ const profissionais = todosPrestadores.map((value, index) => {
         icone,
         tags,
         anuncio: {
-            texto
+            texto,
+            anuncioPago
         }
     }
     return prestadorTeste1Resumo

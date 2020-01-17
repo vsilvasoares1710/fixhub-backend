@@ -37,7 +37,7 @@ const prestadorTeste1Completo = {
       "https://cdn.pixabay.com/photo/2019/12/25/09/23/north-4718160_960_720.jpg",
       "https://cdn.pixabay.com/photo/2018/12/13/14/24/the-kremlin-3872941_960_720.jpg"
     ],
-    anuncio_pago: false
+    anuncioPago: false
   },
   senha: "54fge4g5649",
 };
@@ -73,9 +73,10 @@ const prestadorTeste2Completo = {
       "https://cdn.pixabay.com/photo/2018/12/13/14/24/the-kremlin-3872941_960_720.jpg",
       "https://cdn.pixabay.com/photo/2019/12/23/15/07/freiburg-4714770_960_720.jpg"
     ],
-    anuncio_pago: false
+    anuncioPago: true
   },
   senha: "54fge4g5649",
 };
 const todosPrestadores = [prestadorTeste1Completo, prestadorTeste2Completo];
 module.exports = todosPrestadores;
+ 

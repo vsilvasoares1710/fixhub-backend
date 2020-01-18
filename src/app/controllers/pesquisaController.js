@@ -61,7 +61,12 @@ module.exports = class PesquisaController {
           profissionaisGratuitos.push(profissional)
         }
       })
-      profissionais = [profissionaisPagos, profissionaisGratuitos]
+      profissionaisPagos.map(profissionalPago => {
+        profissionais.push(profissionalPago)
+      })
+      profissionaisGratuitos.map(profissionalGratuito => {
+        profissionais.push(profissionalGratuito)
+      })
 
       return
     }

@@ -2,9 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const todosPrestadores = require("./app/models/dadosTest/todosPrestadores");
-const pesquisa = require("./app/controllers/pesquisaController");
-const profissionais = pesquisa.profissionais;
-const paginas = pesquisa.paginas;
+const PesquisaController = require("./app/controllers/pesquisaController");
+
 const filtros = require("./app/models/dadosTest/filtros");
 
 app.use(bodyParser.json());
@@ -16,22 +15,10 @@ app.get("/filtros", (req, res) => {
 });
 
 // Rota de pesquisa de profissionais
-app.get("/profissionais/:tags/:page", (req, res) => {
-  const resumoPesquisa = {
-    profissionais,
-    info: { paginas, profissionaisEncontrados: profissionais.length }
-  };
-  res.send(resumoPesquisa);
-});
+app.get("/profissionais/:tags/:page", PesquisaController.listarTodosPrestadores);
 
 // Rota de retorno de informações públicas de um profissional em específico
-app.get("/profissionais/:id", (req, res) => {
-  const profissionalCompleto = todosPrestadores[req.params.id - 1];
-
-  const { senha, cpf_cnpj, ...dadosPublicos } = profissionalCompleto;
-
-  res.send(dadosPublicos);
-});
+app.get("/profissionais/:id", PesquisaController.listarPrestadorEspecifico);
 
 // Rota de cadastro de profissionais
 app.post("/profissionais", (req, res) => {
@@ -44,7 +31,7 @@ app.post("/profissionais", (req, res) => {
 });
 
 // Rota de alteração de senha do profissional
-app.patch("/profissionais/:cpf_cnpj", (req, res) => {
+app.patch("/profissionais", (req, res) => {
   res.send(`Senha do profissional de ID: ${20} alterada com sucesso`);
   // Recebe o cpf_cnpj como parametro pela rota e o email ou telefone do profisisonal e a senha nova no corpo da requisição, devolve o id do usuário cuja senha foi atualizada, com status 200 em caso de sucesso. Em caso de falha, falta de email/cpf_cnpj ou senha semelhante à anterior retorna undefined com status de erro.
 });
@@ -67,6 +54,6 @@ app.delete("/profissionais/:id", (req, res) => {
   // Requer token de autenticação. Recebe o id do profisional como parametro e um json dentro do corpo da requisição com o cpf_cnpj, o token de autenticação e o nome completo do profissional para serem deletados do banco. Em cao de sucesso retorna status 200. Em caso de falha retorna status de erro.
 });
 
-console.log("BackEnd Rodando...");
+const PORT = 4000
 
-app.listen(4000);
+app.listen(PORT, () => console.log(`Servidor Rodando na Porta ${PORT}`));

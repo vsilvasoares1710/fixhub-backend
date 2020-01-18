@@ -1,6 +1,6 @@
-const prestadorTeste1Completo = {
+const prestador1 = {
   id: 1,
-  nome: "João da SIlva",
+  nome: "João da Silva",
   cpf_cnpj: "12345678901234",
   icone: "https://image.flaticon.com/icons/png/512/56/56990.png",
   contato: {
@@ -13,10 +13,7 @@ const prestadorTeste1Completo = {
     "eletricista",
     "pintor",
     "encanador",
-    "pedreiro",
-    "gesseiro",
-    "marceneiro",
-    "vidraceiro"
+    "pedreiro"
   ],
   localização: {
     endereço: "Avenida Paulista, 385",
@@ -41,10 +38,10 @@ const prestadorTeste1Completo = {
   },
   senha: "54fge4g5649",
 };
-const prestadorTeste2Completo = {
+const prestador2 = {
   id: 2,
   nome: "Matheus de Magalhães",
-  cpf_cnpj: "9876543210987",
+  cpf_cnpj: "23456789012345",
   icone: "https://image.flaticon.com/icons/png/512/57/57134.png",
   contato: {
     celular: "12 99876-5432",
@@ -77,6 +74,33 @@ const prestadorTeste2Completo = {
   },
   senha: "54fge4g5649",
 };
-const todosPrestadores = [prestadorTeste1Completo, prestadorTeste2Completo];
+const prestador3 = {
+  id: 2,
+  nome: "Jorge Peçanha",
+  cpf_cnpj: "34567890123456",
+  icone: "https://image.flaticon.com/icons/png/512/57/57134.png",
+  contato: {
+    celular: "12 99876-5432",
+    whatsapp: "12 99876-5432",
+    email: "MatheusDeMag@gmail.com"
+  },
+  tags: [
+    "gesseiro",
+    "eletricista",
+    "pintor"
+  ],
+  localização: {
+    endereço: "Rua Geishofer, 161",
+    bairro: "Jardim Baruch",
+    cidade: "Guarulhos",
+    estado: "SP"
+  },
+  anuncio: {
+    texto:
+      "Tempor pariatur anim esse culpa ullamco dolor ea ea eiusmod. Cupidatat exercitation ipsum ullamco ipsum aute. Culpa ex voluptate laborum deserunt commodo est ullamco labore in ullamco.---------------TEXTO DO PRESTADOR 3----------------Do velit ad duis dolor magna ullamco id esse dolor incididunt ad dolor ipsum. Laborum aliquip consectetur exercitation id sunt qui.",
+    anuncioPago: true
+  },
+  senha: "54fge4g5649",
+};
+const todosPrestadores = [prestador1, prestador2, prestador3];
 module.exports = todosPrestadores;
- 

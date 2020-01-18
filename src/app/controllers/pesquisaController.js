@@ -2,7 +2,7 @@ const todosPrestadores = require("../models/dadosTest/todosPrestadores.js");
 
 module.exports = class PesquisaController {
   static listarTodosPrestadores(req, res) {
-    const profissionais = todosPrestadores
+    const listaProfissionais = todosPrestadores
       .map( profissional => {
         const {
           id,
@@ -48,9 +48,28 @@ module.exports = class PesquisaController {
       })
       .filter(prestadorValido => prestadorValido !== null);
 
+    let profissionais = []
+
+    const organizarProfissionais = () => {
+      let profissionaisPagos = []
+      let profissionaisGratuitos = []
+
+      listaProfissionais.map(profissional => {
+        if (profissional.anuncio.anuncioPago === true) {
+          profissionaisPagos.push(profissional)
+        } else {
+          profissionaisGratuitos.push(profissional)
+        }
+      })
+      profissionais = [profissionaisPagos, profissionaisGratuitos]
+
+      return
+    }
+    organizarProfissionais()
+
     const profissionaisPorPagina = 10;
 
-    let paginas = (profissionais.length + 1) / profissionaisPorPagina;
+    let paginas = (listaProfissionais.length + 1) / profissionaisPorPagina;
 
     if (paginas < 1) {
       paginas = 1;
@@ -64,7 +83,7 @@ module.exports = class PesquisaController {
 
     const resumoPesquisa = {
       profissionais,
-      info: { paginas, profissionaisEncontrados: profissionais.length },
+      info: { paginas, profissionaisEncontrados: listaProfissionais.length },
       tags
     };
     return res.send(resumoPesquisa);

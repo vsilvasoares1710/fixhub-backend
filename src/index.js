@@ -5,13 +5,14 @@ const todosPrestadores = require("./database/todosPrestadores");
 const pesquisa = require("./database/pesquisa");
 const profissionais = pesquisa.profissionais;
 const paginas = pesquisa.paginas;
-const filtros = require("./database/filtros")
+const filtros = require("./database/filtros");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/pesquisaProfissionais/:page", (req, res) => {
-
+app.get("/profissionais/:page/:tags", (req, res) => {
+  const page = req.params.page
+  const tags = req.params.tags
   const resumoPesquisa = {
     profissionais,
     info: { paginas, profissionaisEncontrados: profissionais.length }
@@ -19,21 +20,13 @@ app.get("/pesquisaProfissionais/:page", (req, res) => {
   res.send(resumoPesquisa);
 });
 
-app.post("/profissional/:id", (req, res) => {
-
+app.get("/profissionais/:id", (req, res) => {
   const profissionalCompleto = todosPrestadores[req.params.id - 1];
 
-  const { contato, ...informacoesPublicas } = profissionalCompleto;
-
-  if (req.body.token) {
-    res.send(profissionalCompleto);
-  } else {
-    res.send(informacoesPublicas);
-  }
+  res.send(profissionalCompleto);
 });
 
 app.get("/filtros", (req, res) => {
-
   res.send(filtros);
 });
 

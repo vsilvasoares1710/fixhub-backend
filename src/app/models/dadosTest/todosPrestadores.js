@@ -1,6 +1,7 @@
 const prestadorTeste1Completo = {
   id: 1,
   nome: "João da SIlva",
+  cpf_cnpj: "12345678901234",
   icone: "https://image.flaticon.com/icons/png/512/56/56990.png",
   contato: {
     celular: "11 91234-5678",
@@ -17,6 +18,12 @@ const prestadorTeste1Completo = {
     "marceneiro",
     "vidraceiro"
   ],
+  localização: {
+    endereço: "Avenida Paulista, 385",
+    bairro: "Centro",
+    cidade: "São Paulo",
+    estado: "SP"
+  },
   redes_sociais: {
     facebook: "facebook.com/joao_da_silva",
     linkedin: "linkedin.com/joao_da_silva",
@@ -29,19 +36,32 @@ const prestadorTeste1Completo = {
       "https://cdn.pixabay.com/photo/2019/12/23/15/07/freiburg-4714770_960_720.jpg",
       "https://cdn.pixabay.com/photo/2019/12/25/09/23/north-4718160_960_720.jpg",
       "https://cdn.pixabay.com/photo/2018/12/13/14/24/the-kremlin-3872941_960_720.jpg"
-    ]
-  }
+    ],
+    anuncioPago: false
+  },
+  senha: "54fge4g5649",
 };
 const prestadorTeste2Completo = {
   id: 2,
   nome: "Matheus de Magalhães",
+  cpf_cnpj: "9876543210987",
   icone: "https://image.flaticon.com/icons/png/512/57/57134.png",
   contato: {
     celular: "12 99876-5432",
     whatsapp: "12 99876-5432",
     email: "MatheusDeMag@gmail.com"
   },
-  tags: ["espanhol", "francês", "inglês"],
+  tags: [
+    "espanhol",
+    "francês",
+    "inglês"
+  ],
+  localização: {
+    endereço: "Avenida Antônio Carlos Costa, 321",
+    bairro: "Bela Vista",
+    cidade: "Osasco",
+    estado: "SP"
+  },
   redes_sociais: {
     facebook: "facebook.com/matheusdemag",
     siteOficial: "professormatheus.com.br"
@@ -52,8 +72,11 @@ const prestadorTeste2Completo = {
     imagens: [
       "https://cdn.pixabay.com/photo/2018/12/13/14/24/the-kremlin-3872941_960_720.jpg",
       "https://cdn.pixabay.com/photo/2019/12/23/15/07/freiburg-4714770_960_720.jpg"
-    ]
-  }
+    ],
+    anuncioPago: true
+  },
+  senha: "54fge4g5649",
 };
 const todosPrestadores = [prestadorTeste1Completo, prestadorTeste2Completo];
 module.exports = todosPrestadores;
+ 

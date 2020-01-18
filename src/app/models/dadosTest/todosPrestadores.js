@@ -75,14 +75,14 @@ const prestador2 = {
   senha: "54fge4g5649",
 };
 const prestador3 = {
-  id: 2,
+  id: 3,
   nome: "Jorge Peçanha",
   cpf_cnpj: "34567890123456",
   icone: "https://image.flaticon.com/icons/png/512/57/57134.png",
   contato: {
     celular: "12 99876-5432",
     whatsapp: "12 99876-5432",
-    email: "MatheusDeMag@gmail.com"
+    email: "jorgepeçanha@gmail.com"
   },
   tags: [
     "gesseiro",
@@ -96,8 +96,6 @@ const prestador3 = {
     estado: "SP"
   },
   anuncio: {
-    texto:
-      "Tempor pariatur anim esse culpa ullamco dolor ea ea eiusmod. Cupidatat exercitation ipsum ullamco ipsum aute. Culpa ex voluptate laborum deserunt commodo est ullamco labore in ullamco.---------------TEXTO DO PRESTADOR 3----------------Do velit ad duis dolor magna ullamco id esse dolor incididunt ad dolor ipsum. Laborum aliquip consectetur exercitation id sunt qui.",
     anuncioPago: true
   },
   senha: "54fge4g5649",
